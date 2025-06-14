@@ -19,7 +19,7 @@ def create_db_from_youtube_video_url(video_url,embeddings):
 def get_response_from_query(db,query,k=4):
   docs=db.similarity_search(query,k=k)
   docs_page_content = ' '.join([d.page_content for d in docs])
-  chat = ChatGroq(api_key = "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", model = "llama-3.3-70b-versatile", temperature=0)
+  chat = ChatGroq(api_key = "*********************************", model = "llama-3.3-70b-versatile", temperature=0)
 
   template = """You are a helpful assistant that that can answer questions about youtube videos
         based on the video's transcript: {docs}
